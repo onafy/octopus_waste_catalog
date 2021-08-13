@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:octopus_waste_catalog/pick_pack.dart';
+import 'package:octopus_waste_catalog/pages/pick_pack.dart';
 import 'package:animated_button/animated_button.dart';
+import 'package:octopus_waste_catalog/themes.dart';
 
 void main() {
   runApp(MyApp());
@@ -10,9 +11,10 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Wisata Bandung',
-      theme: ThemeData(),
       home: Home(),
+      theme: ThemeData(
+        fontFamily: 'Poppins',
+      ),
     );
   }
 }
@@ -21,7 +23,6 @@ class MyApp extends StatelessWidget {
 
 class Home extends StatelessWidget{
 
-  var homeStyle = TextStyle(fontFamily: 'Poppins');
   @override
   Widget build(BuildContext context){
     return Scaffold(
@@ -64,7 +65,6 @@ class Home extends StatelessWidget{
                                     children: [
                                       Text('Pick and Pack',
                                         style: TextStyle(
-                                            fontFamily: 'Poppins',
                                             fontSize: 20,
                                             fontWeight: FontWeight.bold,
                                           color: Color(0xff3f97e1)),),
@@ -73,7 +73,6 @@ class Home extends StatelessWidget{
                                         width: 200,
                                         child: Text('Ayo bersihkan tempat sampah kita!',
                                             style: TextStyle(
-                                              fontFamily: 'Poppins',
                                               height: 1.3,
                                             ),
                                             maxLines: 2,),
@@ -105,11 +104,10 @@ class Home extends StatelessWidget{
                                 },
                                 child: Text('LIHAT KATALOG',
                                   style: TextStyle(
-                                      fontFamily: 'Poppins',
                                       fontWeight: FontWeight.bold,),
                                 ),
                                 style: ElevatedButton.styleFrom(
-                                    primary: Color(0xff3f97e1),
+                                    primary: bluePrimary,
                                 ),
                               ),
                             ),
@@ -136,7 +134,7 @@ class Home extends StatelessWidget{
                             shape: RoundedRectangleBorder(
                               borderRadius: BorderRadius.circular(8),
                             ),
-                            color: Color(0xff3f97e1),
+                            color: bluePrimary,
                             child: Padding(
                               padding: const EdgeInsets.all(15),
                               child: Column(
@@ -147,7 +145,7 @@ class Home extends StatelessWidget{
                                     child: Row(
                                       children: [
                                         CircleAvatar(
-                                          backgroundColor: Colors.white,
+                                          backgroundColor: whiteColor,
                                           radius: 13,
                                           child: Container(
                                             child: Image.asset('images/coins_home.png'),
@@ -158,14 +156,14 @@ class Home extends StatelessWidget{
                                         SizedBox(width: 10),
                                         Text('Cash',
                                             style: TextStyle(
-                                              fontFamily: 'Poppins',
                                               fontWeight: FontWeight.bold,
-                                              color: Colors.white,
+                                              color: whiteColor,
                                               fontSize: 12,
                                             )),
                                         SizedBox(width: 55),
-                                        Icon(Icons.arrow_forward_ios, size:20,
-                                          color: Colors.white,)
+                                        Icon(Icons.arrow_forward_ios,
+                                          size:20,
+                                          color: whiteColor,)
                                       ],
                                     ),
                                   ),
@@ -177,15 +175,13 @@ class Home extends StatelessWidget{
                                       children: [
                                         Text('10.415',
                                             style: TextStyle(
-                                              fontFamily: 'Poppins',
-                                              color: Colors.white,
+                                              color: whiteColor,
                                               fontSize: 20,
                                             )),
                                         SizedBox(width: 6),
                                         Text('rupiah',
                                           style: TextStyle(
-                                              fontFamily: 'Poppins',
-                                              color: Colors.white,
+                                              color: whiteColor,
                                               fontSize: 12),
                                         ),
                                       ],
@@ -207,7 +203,7 @@ class Home extends StatelessWidget{
                             shape: RoundedRectangleBorder(
                               borderRadius: BorderRadius.circular(8),
                             ),
-                            color: Color(0xff3f97e1),
+                            color: bluePrimary,
                             child: Padding(
                               padding: const EdgeInsets.all(15),
                               child: Column(
@@ -218,7 +214,7 @@ class Home extends StatelessWidget{
                                     child: Row(
                                       children: [
                                         CircleAvatar(
-                                          backgroundColor: Colors.white,
+                                          backgroundColor: whiteColor,
                                           radius: 13,
                                           child: Container(
                                             child: Image.asset('images/coins_home.png'),
@@ -229,14 +225,13 @@ class Home extends StatelessWidget{
                                         SizedBox(width: 10),
                                         Text('Poin',
                                             style: TextStyle(
-                                              fontFamily: 'Poppins',
                                               fontWeight: FontWeight.bold,
-                                              color: Colors.white,
+                                              color: whiteColor,
                                               fontSize: 12,
                                             )),
                                         SizedBox(width: 55),
                                         Icon(Icons.arrow_forward_ios, size:20,
-                                          color: Colors.white,)
+                                          color: whiteColor,)
                                       ],
                                     ),
                                   ),
@@ -248,15 +243,13 @@ class Home extends StatelessWidget{
                                       children: [
                                         Text('66.315',
                                             style: TextStyle(
-                                              fontFamily: 'Poppins',
-                                              color: Colors.white,
+                                              color: whiteColor,
                                               fontSize: 20,
                                             )),
                                         SizedBox(width: 6),
                                         Text('dtbm',
                                           style: TextStyle(
-                                              fontFamily: 'Poppins',
-                                              color: Colors.white,
+                                              color: whiteColor,
                                               fontSize: 12),
                                         ),
                                       ],

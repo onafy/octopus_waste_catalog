@@ -2,7 +2,8 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:octopus_waste_catalog/main.dart';
 import 'package:octopus_waste_catalog/model/waste_category.dart';
-import 'package:octopus_waste_catalog/pick_pack_detail.dart';
+import 'package:octopus_waste_catalog/pages/pick_pack_detail.dart';
+import 'package:octopus_waste_catalog/themes.dart';
 
 
 class PickPack extends StatelessWidget{
@@ -44,7 +45,7 @@ class PickPackMobile extends StatelessWidget{
                   child: Align(
                     alignment: Alignment.center,
                     child:Container(
-                      color: Colors.white,
+                      color: whiteColor,
                       height: 150,
                       child: Row(
                         crossAxisAlignment: CrossAxisAlignment.center,
@@ -62,7 +63,7 @@ class PickPackMobile extends StatelessWidget{
                                       width: 68,
                                       height: 68,
                                       decoration: BoxDecoration(
-                                        color: Color(0xff3B9E9E9E),
+                                        color: greyBackground,
                                         borderRadius: BorderRadius.all(Radius.circular(7)),
                                       ),
                                     ),
@@ -79,12 +80,13 @@ class PickPackMobile extends StatelessWidget{
                               ),
                             ),
                           ),
+
                           //Layout Nama Waste
                           Expanded(
                             flex: 2,
                             child: Container(
                               margin: EdgeInsets.only(left:10, right: 5),
-                              color: Colors.white,
+                              color: whiteColor,
                               child: Column(
                                   crossAxisAlignment: CrossAxisAlignment.start,
                                   mainAxisAlignment: MainAxisAlignment.center,
@@ -92,8 +94,6 @@ class PickPackMobile extends StatelessWidget{
                                     SizedBox(height:20),
                                     Text(waste.plasticName,
                                       style: TextStyle(
-                                        fontFamily: 'Poppins',
-                                        fontSize: 13,
                                         fontWeight: FontWeight.bold,
                                       ),
                                     ),
@@ -101,7 +101,6 @@ class PickPackMobile extends StatelessWidget{
                                     Container(
                                       child: Text(waste.description,
                                         style: TextStyle(
-                                          fontFamily: 'Poppins',
                                           height: 1.2,
                                           fontSize: 8,
                                         ),
@@ -120,7 +119,7 @@ class PickPackMobile extends StatelessWidget{
                                               width: 85,
                                               height: 22,
                                               decoration: BoxDecoration(
-                                                color: Color(0x2e3f97e1),
+                                                color: blueLight,
                                                 borderRadius: BorderRadius.all(Radius.circular(7)),
                                               ),
                                             ),
@@ -130,10 +129,10 @@ class PickPackMobile extends StatelessWidget{
                                             child: Padding(
                                               padding: const EdgeInsets.only(top: 3, left: 3),
                                               child: CircleAvatar(
-                                                backgroundColor: Color(0xff3f97e1),
+                                                backgroundColor: bluePrimary,
                                                 radius: 8,
                                                 child: Container(
-                                                  child: Image.asset('images/coins_home.png', color: Colors.white,),
+                                                  child: Image.asset('images/coins_home.png', color: whiteColor,),
                                                   width: 10,
                                                   height: 10,
                                                 ),
@@ -146,9 +145,8 @@ class PickPackMobile extends StatelessWidget{
                                               padding: const EdgeInsets.only(top: 3, left: 23),
                                               child: Text(waste.price,
                                                 style: TextStyle(
-                                                  fontFamily: 'Poppins',
                                                   fontSize: 10,
-                                                  color: Color(0xff3f97e1),
+                                                  color: bluePrimary,
                                                   fontWeight: FontWeight.bold,
                                                 ),
                                               ),
@@ -161,6 +159,8 @@ class PickPackMobile extends StatelessWidget{
                               ),
                             ),
                           ),
+
+                          //Layout Plastic Code
                           Expanded(
                             flex: 1,
                             child: Align(

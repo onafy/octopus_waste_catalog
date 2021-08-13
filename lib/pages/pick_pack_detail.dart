@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:octopus_waste_catalog/main.dart';
 import 'package:octopus_waste_catalog/model/waste_category.dart';
+import 'package:octopus_waste_catalog/themes.dart';
 
 
 class PickPackDetail extends StatelessWidget{
@@ -58,10 +59,10 @@ class PickPackDetailMobile extends StatelessWidget{
                         width: 30,
                         height: 35,
                         child: CircleAvatar(
-                          backgroundColor: Color(0x65FFFFFF),
+                          backgroundColor: greyLight,
                           child: IconButton(
                             icon: Icon(Icons.arrow_back_ios,
-                                color: Colors.black,
+                                color: blackColor,
                                 size: 20),
                             onPressed: (){
                               Navigator.pop(context);
@@ -70,6 +71,7 @@ class PickPackDetailMobile extends StatelessWidget{
                     ),
                   ),
                 ),
+
 
                 //Isi Konten
                 Align(
@@ -83,7 +85,7 @@ class PickPackDetailMobile extends StatelessWidget{
                       children: [
                         //plastic code
                         CircleAvatar(
-                          backgroundColor: Color(0xFFDBDBDB),
+                          backgroundColor: greyLight,
                           radius: 25,
                           child: Container(
                             child: Image.asset(waste.plasticCode),
@@ -99,8 +101,6 @@ class PickPackDetailMobile extends StatelessWidget{
                           children: [
                             Text('Jumlah Item',
                               style: TextStyle(
-                                  fontFamily: 'Poppins',
-                                  fontSize: 13,
                                     fontWeight: FontWeight.bold,
                             ),),
                             InputButton(),
@@ -109,27 +109,22 @@ class PickPackDetailMobile extends StatelessWidget{
                         SizedBox(height: 30),
                         Text('Deskripsi',
                           style: TextStyle(
-                            fontFamily: 'Poppins',
-                            fontSize: 13,
                             fontWeight: FontWeight.bold,
                           ),),
                         SizedBox(height:5),
                         Text(waste.description,
                           style: TextStyle(
-                            fontFamily: 'Poppins',
                             fontSize: 11,),
                         ),
                         SizedBox(height: 30),
                         Text('Example',
                           style: TextStyle(
-                            fontFamily: 'Poppins',
-                            fontSize: 13,
                             fontWeight: FontWeight.bold,
                           ),),
                       ],
                     ),
                     decoration: BoxDecoration(
-                      color: Colors.white,
+                      color: whiteColor,
                       borderRadius: BorderRadius.only(
                         topLeft: const Radius.circular(40),
                         topRight: const Radius.circular(40),
@@ -154,10 +149,9 @@ class PickPackDetailMobile extends StatelessWidget{
                               margin: EdgeInsets.only(bottom: 40, right: 20),
                               child: Text(waste.plasticName,
                                 style: TextStyle(
-                                  fontFamily: 'Poppins',
                                   fontSize: 20,
                                   fontWeight: FontWeight.bold,
-                                  color: Colors.white,
+                                  color: whiteColor,
                                 ),
                               ),
                             ),
@@ -245,14 +239,13 @@ class _InputButtonState extends State<InputButton>{
             textAlignVertical: TextAlignVertical.center,
             keyboardType: TextInputType.number,
             style: TextStyle(
-              fontFamily: 'Poppins',
-              color: Color(0xFF505050),
+              color: blackColor,
               fontSize: 13,
               fontWeight: FontWeight.bold,
             ),
             decoration: InputDecoration(
               filled: true,
-              fillColor: Color(0x469E9E9E),
+              fillColor: greyLight,
               hintText: '0',
               contentPadding: EdgeInsets.zero,
               border: OutlineInputBorder(
@@ -277,7 +270,7 @@ class _InputButtonState extends State<InputButton>{
             child: Text('+',
                 textAlign: TextAlign.center,
                 style: TextStyle(
-                  color: Color(0xFF505050),
+                  color: blackColor,
                   fontSize: 15,
                   fontWeight: FontWeight.bold,
                 )),
